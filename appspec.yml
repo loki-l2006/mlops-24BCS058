@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: /mlops-student/
+  - source: mlops-student/
     destination: /home/ubuntu/mlops-24BCS058/mlops-student
 hooks:
   ApplicationStop:
