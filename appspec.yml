@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: /mlops-student/
+    destination: /home/ubuntu/mlops-24BCS058/mlops-student
+hooks:
+  ApplicationStop:
+    - location: scripts/stop_container.sh
+      timeout: 60
+      runas: root
+  ApplicationStart:
+    - location: scripts/start_container.sh
+      timeout: 300
+      runas: root
